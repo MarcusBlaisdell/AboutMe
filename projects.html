@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Merriweather|Sacramento" rel="stylesheet">
+
+</head>
+  <body>
+
+    <div class="top-container">
+      <h1>Projects</h1>
+    </div>
+
+    <div class="middle-container2">
+      <h2>Personal</h2>
+
+      <h1>HyperCube Plus</h1>
+      <h4>Home built 3d Printer</h4>
+      <img src="images/HyperCubePlus_Front.jpg" width=200 alt="HyperCubePlus">
+      <p class="p2">
+        I really wanted to build a 3d printer from scratch.
+        <br>I watched the build series from
+        <a class="color-link" href="https://www.youtube.com/playlist?list=PLIaArjwViQRVAERWRrYfe9rtiwvvRGCzw">Tech2C's Hypercube</a>
+        build and I really liked what he did. I used his project as my guide.
+        <br>A key difference I wanted for my printer though was I didn't want any 3d printed parts on it.
+        I wanted it to be as sturdy as I could make it and, more importantly, I wanted to be able to
+        put everything in a heated, insulated enclosure to improve my print quality with ABS plastic which is
+        highly sensitive to defects from premature cooling. The Stratysis printers at the FIZ (Frank Innovation Zone) at WSU hold an internal temperature
+        of 80<span>&#176;</span>C that allows them to produce fantastic quality ABS prints. If I was going to achieve temps anywhere near that,
+        I would not be able to have any plastic parts inside the print area.
+        <br>I used aluminum for all of the parts and designed the printer so that all electronics
+        will be outside the print area.
+        <br>The CoreXY printer configuration Tech2C used allowed me to do this by moving the X and Y motors outside the printer frame.
+        I used two Z motors for extra control and since they are on the bottom of the printer, I could insulate them from the print
+        area.
+        <br>With a lot of help from Kirk Reinkens and the machine shop in the FIZ, I was able to machine all of my custom parts.
+        This was a learning experience and the X-Y joiners had to be made twice since the tolerances on the first version were too loose.
+      </p>
+      <p class="p2">
+        I worked on this project during the summer of 2018 and it took me about three months to complete.
+        <br>The printer is fully functional and produces good quality prints:
+      </p>
+
+      <a class="color-link" href="https://www.youtube.com/watch?v=4waBMG7WwSg">Side View</a>
+       -
+      <a class="color-link" href="https://www.youtube.com/watch?v=jBVXxuq87EI">Top View</a>
+
+
+    </div>
+
+    <div class="middle-container2">
+      <h2>Robotics Club</h2>
+
+      <p class="p2">
+        Every year, the projects the Robotics Club works on come strictly from the desires of the students in the club. Anyone can propose a project idea and if it is
+        approved by the club mentor, the club will purchase the materials and provide lab space.
+      </p>
+
+      <h1>Autonomous Chess Playing Robot Arm</h1>
+      <img src="images/ChessRobot.jpg" width=300 alt="ChessRobot">
+      <p class="p2">
+        The goal was to build a vision controlled robot arm that could play chess against
+        a human opponent autonomously.
+        <br>This project ran for three years of the club. I was involved in the last two
+        years and picked up from where the first year team left off.
+        <br>The project initiators had selected HerkuleX smart servos for their motors.
+        <br>These servos have on-board circiutry that allow them to read their position and temperature.
+        This eliminates one issue with standard servos in that you can turn them on from a power-off condition
+        and know what position they are in. Standard servos require you to move them to a known position before
+        working with them and that causes a jerking motion when they are first turned on since they could be at
+        an angle very far from your start point and when they move to home, they do so as fast as they are able.
+        The HerkuleX servos also advertise high-torque capabilities that made them highly desirable. The documentation
+        available for them was lacking and mostly in a foreign language so it took me two weeks to figure out how to
+        use them with an Arduino microcontroller but once that issue was resolved, they were very easy to work with.
+        <br>The Robotics Club at WSU is fantastic for helping students to learn the skills they need for their projects
+        and in my first year, PhD student Gabriel de la Cruz gave a presentation on using OpenCV which I used to help
+        incorporate vision into this project.
+        <br>I was able to get a basic arm with two degrees of motion to track on object from a laptop camera and move
+        the arm end effector to follow it.
+        <br>This was what I accomplished in my first year:
+      </p>
+
+      <a class="color-link" href="https://www.youtube.com/watch?v=8kMvOXDBDWQ">Vision Tracking Demo</a>
+
+      <p class="p2">
+        In my second year, I started focusing on building a system that could recognize the chess pieces.
+        This was before I learned about convolutional neural networks so I was using a simpler method of taking a photo of
+        each piece, storing them, and then comparing each frame of the camera to the set of stored images and if the image in frame was
+        greater than 70% similar to a stored image, that was most likely the piece. This method worked OK but
+        there was room for improvement.
+        <br>I mapped out the positions on the chess board and stored them as arrays of servo positions. I was working
+        on a method of subtraction of current position to desired position to move the arm from one position to another.
+        This was before I had learned about concepts like Denavit-Hartenberg parameters and forward and reverse kinematics.
+        <br>I also purchased a <a class="color-link" href="https://www.elabpeers.com/robotic-arm.html">kit robot arm</a>
+        for myself from <a class="color-link" href="https://www.elabpeers.com/">eLAB PEERS</a>
+        so that I didn't have to spend any more time on designing the hardware
+        which was something that took up a lot of time in the first year. This arm uses the standard servos instead of the
+        smart servos but the trade-off of having all of the components designed and built already was acceptable.
+      </p>
+
+      <p class="p2">
+        The project didn't continue in the following years due to lack of interest.
+        <br>That is unfortunate as the club purchased an
+        even better <a class="color-link" href="https://www.trossenrobotics.com/p/PhantomX-Pincher-Robot-Arm.aspx?feed=Froogle">new robot arm</a>
+        from <a class="color-link" href="https://www.trossenrobotics.com">Trossen Robotics</a> that also uses smart servos.
+      </p>
+
+      <h1>Mind Controlled Prosthetic Hand</h1>
+      <p class="p2">
+        The goal for this project is to develop a Prosthetic hand that can respond to a user's thoughts.
+        <br>The team that began this project was comprised of mostly bio-engineering students.
+        <br>In the first year of the project that I was not involved in, the team had 3d printed a hand from a model
+        found online. They had purchased a <a class="color-link" href="https://chipkit.net/wiki/index.php?title=ChipKIT_uC32">chipKIT uC32</a>
+        microcontroller, <a class="color-link" href="https://www.portescap.com/en/products/brushless-dc-motors/all-bldc-motors">Portescap Brushless Motors</a>,
+        and an <a class="color-link" href="https://openbci.com/">OpenBCI Cyton</a> board with sensors.
+        <br>They did meet with some success in controlling the hand manually but did not make much progress on learning to use the brain-control interface device.
+        <br>In the projects second year, I helped out with getting the motors to work and with setting up the OpenBCI software.
+        <br>The second year team had trouble getting the hand to work consistently. It was very intermittent and the movement was often sporadic as it would
+        sometimes move slow then really fast. They suspected the problem was with the motors since they had purchased them used.
+        <br>I looked up the model number on the motors and found that they were actually rated for 12v and the team had been using 5v. When I replaced the motor
+        power supply with 12v, they began functioning perfectly.
+        <br>Unfortunately, the year one circuitry had been scavenged by another team for another project
+        so I replaced the chipKIT microcontroller with an Arduino Uno. I used H-Bridge Motor Driver's for the motor controllers. I wired motors from all five fingers,
+        connected them to push buttons and <a class="color-link" href="https://www.youtube.com/watch?v=BOxPjj7PvQQ">verified that everything was working properly</a>.
+        <br>I contacted OpenBCI and got access to the 3d printer files for the plastic helmet to house the sensors and had it printed in the FIZ with the Stratysis printers.
+        It was a 24 hour print and the cost to the club was $170.
+        <br>I investigated the OpenBCI open source software and installed in on a lab computer and after resolving some UTF encoding issues, I worked out how to
+        get the raw sensor signals to write to text files so they could be used by a machine learning algorithm to try to learn the brain signals that would correspond
+        to the desired hand movements. We gathered data for two hours from five users by having them wear the headset and simply open and close their hands. This was
+        again before I had learned how to do machine learning so I had not yet set up the ability to label the data. Other team members began working on implementing a
+        neural network but they became busy with their school work and did not make progress on this.
+      </p>
+
+      <h1>BB-8</h1>
+      <p class="p2">
+        Usually, projects are proposed by current club members. This time, the outgoing club President, Austin Bonnes, said he really wanted to do a BB-8. I loved the idea
+        and decided to start it on my own over the summer.
+        <br>I saw a <a class="color-link" href="https://www.youtube.com/watch?v=-QbFvDIyy1k">youtube video</a> of a teenager building his own life-sized version and used that as my guide.
+        I used an exercise ball as the template and spent a week doing the paper mache. I would put on a layer each evening. By the time I decided I had enough, it ended up being ~0.25" thick.
+        <p>
+          <img width=200 src="images/BB-8_PaperMache.jpg" alt="BB-8_1"> -
+          <img width=200 src="images/BB-8_PaperMache2.jpg" alt="BB-8_2">
+        </p>
+        <p class="p2">I was surprised by how well the paper mache held up, although, it did warp somewhat which caused some problems. I used a hand saw to cut the piece into two halves and
+          sealed it with a water-proof, spray-on rubber, painted the whole thing white, then painted the
+          orange decorations on it. I purchased some pre-fab aluminum pieces to construct the inner robot that would control the movement and picked up a plastic salad bowl to serve as a
+          make-shift head. I cut a rubber ball in half to stand in for the eye.
+      </p>
+
+      <p><img width=400 src="images/BB-8_WSUBBQ.jpg"></p>
+
+      <p class="p2">
+        To join the two halves, we initially tried using an aluminum band on the inside perimeter. We glued it to one half and drilled and tapped it and drilled complementary mounting holes
+        the other half to put bolts through.
+      </p>
+      <p>
+        <img width=300 src="images/BB8-MetalRing.jpg" alt="MetalRing">
+      </p>
+      <p class="p2">
+        This held the two halves together well but it had a large lip that prevented the inner-bot from being able to move freely and in order to allow it
+        to be able to spin through the entire inside, we had to shorten it which meant that the magnets we intended to hold the head on were much farther away, reducing their effectiveness.
+        <br>We did get it to work by using a putty to create ramps around the lips:
+      </p>
+
+      <p>
+        <a class="color-link" href="https://www.youtube.com/watch?v=YJk4Iqm8tKM">Successful Movement Test One</a>
+      </p>
+
+      <p class="p2">
+        To improve on this, I 3d printed a replacement ring that matched the contours of the shells and that eliminated the lip problem, the bot could now move more freely through the entire sphere:
+      </p>
+      <p>
+        <a class="color-link" href="https://www.youtube.com/watch?v=_V361RkByOw">Successful Movement Test Two</a>
+      </p>
+
+      <p class="p2">
+        We still had the problem that even the 3d printed, contoured ring required us to shorten the bot so we still had the magnet distance problem. I decided it was time to call this a
+        successful proof-of-concept and move to a more well-designed body. I designed a new body in Fusion 360:
+
+        <br><a class="color-link" href="https://www.thingiverse.com/thing:4904667">View parts on Thingiverse</a>
+      </p>
+
+      <p>
+      <img width=200 src="images/BB8_V2_Body.png" alt="Body">
+      <img width=200 src="images/BB8_V2_Head.png" alt="Head">
+      <img width=200 src="images/BB8_V2_HeadMount-top.png" alt="Top">
+      <img width=200 src="images/BB8_V2_HeadMount-bottom.png" alt="Bottom">
+      </p>
+
+      <p class="p2">
+        I divided everything into small pieces that I could print on my Prusa MK2 3d printer at home. The entire job took about 350 hours of printing and would have cost a lot to have
+        printed in the FIZ. By doing it at home, I only charged the club for the price of the filament. I went through two and a half, 1kg spools of ABS plastic at $20/spool. We used
+        epoxy to glue all the pieces together:
+      </p>
+
+      <p>
+        <img width=300 src="images/Glueing BB8 Plastic.jpg" alt="Glueing">
+        <img width=300 src="images/BB8_V2_Construction.jpg" alt="Construction">
+      </p>
+
+      <p class="p2">
+        This produced a much smoother, more uniform body. It eliminated the warping issues we had with paper mache.
+        I included the mounting holes in the design with overlapping, flush flanges so the inside was smooth with no raised areas.
+        <br>This was where the school year ended and the work on this project stopped. I was now about to begin my senior year and needed to devote all the time I had spent with the
+        Robotics Club to my Senior Design Project.
+        <br>I do plan to renew construction on this at home and build this for myself, as well as a life-sized R2-D2.
+      </p>
+
+      <h1>Mars Rover</h1>
+      <img width=300 src="images/Mars Rover I Wiring.jpg" alt="Rover Wiring">
+      <img width=300 src="images/Mars Rover II Wheel Testing.jpg" alt="Rover Wiring">
+
+      <p class="p2">
+        The goal of the WSU Mars Rover Project is to build a rover capable of competing in the <a class="color-link" href="http://urc.marssociety.org/">University Rover Challenge</a>.
+        <br>This challenge has specific requirements that must be met and change somewhat from year to year. The project had already been in development for one year when I joined.
+        The previous year's team had built a frame with Bosch tubing. They used the WSU Machine Shop to machine solid aluminum bars into a rocker-bogie suspension system. They
+        machined aluminum pipes into contoured wheels that had a slight rounding. They used a water jet to cut out aluminum wheel hubs. They had also used the water jet to cut out
+        triangle patterns from aluminum sheets to build a light-weight arm that they were planning to use servos to manipulate. They 3d printed a sample scoop to attach to the arm.
+        There was a lot of mechanical work done on the project but no electrical or code work. They had purchased motors for the wheels and I began work with them. They were 12V
+        motors. The previous team had purchased three, 6V, lead acid batteries that they were planning to use to power the entire rover. I purchased a 12V Voltage regulator to
+        step the voltage down from the three batteries in series and purchased Sabertooth Motor controllers to control them.
+      </p>
+        <img width=300 src="images/Mars Rover Motor Controllers.jpg" alt="motor controllers">
+
+      <p class="p2">
+        One of the requirements of the URC is that the rover must be controlled remotely, in Utah, from our home campus, in Washington. Our plan was to use the internet to achieve
+        this. I setup a control station on a laptop with an open source webcam monitoring program running on Linux to be able to view the rover's camera data locally. I then set up
+        an Apache server to read commands from the control station and transmit them via internet to a program running on an onboard Raspberry Pi that would send control signals to
+        the Arduino microcontroller to control the rover. We tested this system multiple times by controlling the rover from a different room and it worked well <a class="color-link" href="https://www.youtube.com/watch?v=aDeZ-PgXYhI">(video)</a>. I implemented an
+        interim electrical system to control the rover and we decided to replace the lead acid batteries with lithium polymer. I designed the first rudimentary electrical plan:
+      </p>
+      <img width=200 src="images/Rover Electrical schema.png" alt="Rover Electrical">
+
+      <p class="p2">
+        This system worked OK but the wheels weren't moving very fast and didn't have enough power to get the rover moving from a dead stop. It needed a nudge to get going. I suspected
+        that the weight of the full system was too much for our motors but, one day, as I was testing it, a Master's student that works in the Robotics Lab was talking with me about the
+        project. His undergrad is in Electrical Engineering and he looked my wiring over and asked my how much current I was expecting at each motor. I told him and he said that it
+        looked to him like the wires I was using were too thin and he recommended I go to a lower gauge (lower wire gauge = thicker wire). I did a quick Google search for the proper
+        AWG wire for my current needs and swapped all high power wires with the proper gauge. When I tried testing it again, the difference was night and day. The motors were able to
+        move so fast that the aluminum wheels were breaking free of the low friction concrete floor. Problem solved, thank you very much James Irwin!
+        <br>This was everything I was able to accomplish my first year working on the rover.
+      </p>
+
+      <p class="p2">
+        In my second year working on the rover, a Mechanical Engineering student in the club got approval to use the rover as his teams Senior Design project. They worked on completely
+        redesigning all of the mechanical parts. They designed a new body, a new suspension system, and a new arm. They also built everything. The new rover was larger and was designed
+        with the internals in mind so there was more room for electronics.
+        <br>The electrical and code needs were the same for the wheels but the new arm used 12V linear actuators instead of 5V servos so I wrote new code and ran new wires to handle them.
+        I <a class="color-link" href="https://www.youtube.com/watch?v=w3xCheYKP-0">tested</a> everything and verified it was working.
+        <br>This was all of the work I was able to do on the project this year. I was serving as President of the Robotics Club and was busy with administrative duties.
+      </p>
+
+
+    </div>
+
+    <div class="middle-container2">
+      <h1>Robobble</h1>
+
+      <p class="p2">
+        One day, in the Robotics Club, two Architecture professors, Saleh Kalantari &  Ebrahim Poustinchi, came in and asked for help
+        on a project they wanted to build.
+        <br>They had an idea of an amorphous blob that could change it's shape as directed by
+        a user via a mobile app.
+      </p>
+
+      <img src="https://www.researchgate.net/profile/Saleh-Kalantari/publication/332103334/figure/fig2/AS:742345423200256@1554000349315/User-interaction-in-the-form-making-process-are-carried-out-through-the-ROBOBBLE-app.jpg" width=300>
+
+      <p class="p2">
+        I love art and technology and this seemed like a fun project so I volunteered to help them.
+        <br>Based on their description, I recommended using linear actuators to control the shape. They purchased three different sizes for
+        evaluation and decided to go with a 24" stroke and twenty actuators arranged around a sphere. The actuators were rated for 2A/ea so
+        I ordered a 20A, 12V Power supply believing that this would be able to operate up to ten actuators simultaneosly though they said
+        they were only plannning to have no more than four in operation at any given time. When the actuators arrived, testing showed that
+        they were drawing less than 1A but that was with no load. Later, after everything was connected, we found that they were actually
+        drawing closer to 4A/ea and the economical power supply we had purchased was obviously not able to provide the advertised current levels.
+        I was barely able to run two actuators at a time without the system bogging down. We were testing them in a fabrication lab with an
+        18 AWG power cable which should have been able to handle 15A so the problem seemed to be with the power supply itself. This discovery
+        was made two days before this piece was scheduled to be displayed in the WSU Fine Arts Center. At this time, I was still working
+        full time at SEL and taking two classes so my time to work on this problem was limited. I discussed it with one of the guys in the
+        Robotics Lab and he said that a PC power supply should be able to handle the job so I went to VGH in Moscow and picked up a 30A PC P/S
+        and when we connected it, everything ran perfectly.
+        <br>The professors wanted this to be controlled by a mobile app, specifically, iPhone, and they wanted it to be available on the app store.
+        I had a friend that did mobile apps so I asked her to help. She initially agreed but as often happens, her school workload prevented her
+        from working on it. Two weeks before the debut, I decided I needed to get another person to help with the app since, at this time, I had
+        not yet learned app development. Unfortunately, I couldn't find anyone else able to help but, again, a helpful person in the Robotics Lab
+        made a suggestion about the MIT App Inventor. They said it was a quick and easy way to make Android apps using a drag-and-drop
+        programming tool that I later learned is called "Scratch". I tested it that night and was able to make an app that would let me turn an
+        LED on through an Arduino using an HC-05 Bluetooth module that I had on hand. This gave me all the basics I needed to I explained the
+        situation to the professors. They weren't satisfied but given the circumstances, we do what we must so I spent an evening building my
+        crude, yet functioning app that could control twenty linear actuators through Bluetooth from an Android mobile phone. I loaned my old
+        Galaxy SIII to the project since the professors only had iPhones. I was concerned since I had to be logged in to be able to use the
+        app since it authenticates with MIT's servers and doesn't function without an internet connection that since it was on campus, I was using
+        my WSU credentials so I cautioned the professors to please, please, please keep an eye on anyone using it and not allow them to do anything
+        malicious. Terrible security, I know, but, as I said, short time constraints and what with failure not being an option and all, I took the risk.
+        <br>The professors handled the physical construction of the device and I was responsible for the wiring. Oh how I wish I had been privy to the
+        construction discussion because they left me very little room to work with inside the housing.
+        I used the economical L298N H Bridge Motor Controller Boards (~$8/ea) which can each control two motors. After they had assemble the device,
+        they removed one actuator from the bottom to mount it on a base leaving me with nineteen motors to control requiring ten controllers and one
+        Arduino Mega 2560 microcontroller. It was very crowded inside the housing and with so many wires, it was hard to get everything organized in
+        the short amount of time I had. I was diligent to make sure I put labels on every wire at both the source and destination which was so crucial
+        for troubleshooting.
+        <br>The evening before they were to install the piece in the gallery, we finished all of the work and completed final testing and everything
+        was functioning perfectly. The piece was moved to the gallery and set up and I came to the show for intruductions and to be on hand to answer
+        any questions during the show from the attendees.
+      </p>
+
+      <p class="p2">The professors put together a nice video of the project:</p>
+      <h2><a class="color-link" href="https://www.youtube.com/watch?v=a-_FUAVKKeM">ROBOBBLE</a></h2>
+      <p class="p2">
+        0:23 - Me writing firmware while Saleh and Ebrahim assemble the device
+        <br>0:33 - Me wiring the motors and microcontroller while Saleh and Ebrahim prepare the panels
+        <br>0:38 - Testing while Saleh and Ebrahim continue assembling the device
+        <br>0:46 - First full functional test, showing the app
+        <br>0:50 - The show
+      </p>
+
+    </div>
+
+    <div class="middle-container2">
+      <h2>Morpho/genesis Lab</h2>
+
+      <h1><a class="color-link" href="https://www.morphogenesislab.com/new-page-2">Parasympathy</a></h1>
+      <img width=200 src="https://images.squarespace-cdn.com/content/v1/5e26333ba732e60179af5855/1620613331444-GCDL3LEF81FMSZXQ9VV1/thumbnail.jpg" alt="Parasympathy 2020" />
+      <p class="p2">
+        Parasympathy is an adaptive, kinetic sculpture conceived of by Mohamed Ismael and Mona Ghandi.
+        <br>The finished piece was installed in the Lewis-Clark State College Center for Arts & History gallery in Lewiston, Idaho. The project was on
+        display for one week when the Covid 19 quarantine went into effect.
+      </p>
+
+      <p class="p2">
+        We use micro-servos connected to a scissor lift mechanism to change the distance and shape of the colored, reflective material to create the
+        dynamic lighting effects.
+        We connected this to our model for predicting human emotions via wearable sensors so the piece will respond to the feelings of the user.
+        <br>This project uses four Arduino Mega microcontollers connected to each other through serial ports to sync the motion across the four panels.
+        The microcontrollers are connected to an internet connected Raspberry Pi that reads the predicted emotion from the web server.
+        <br>There are 38 LED's and micro-servos used in this piece.
+        <br>I did all of the wiring and code for the entire project. I assisted with the physical installation.
+      </p>
+
+      <h1><a class="color-link" href="https://www.morphogenesislab.com/wisteria">Wisteria</a></h1>
+      <img width=200 src="https://images.squarespace-cdn.com/content/v1/5e26333ba732e60179af5855/1620179890348-45EBIDK6EUBXX2K0BBQI/DSCF5169.JPG" alt="Wisteria 2021">
+      <p class="p2">
+        Wisteria uses a shape memory alloy for the kinetic elements.
+        <br>I was asked to use this material to be able to raise and lower the shrouds. I experimented with the wire and found that a coiled spring
+        produced the desired effect.
+      </p>
+      <p class="p2">For this project I:
+        <ul class="tab">
+          <li>Formed all of the SMA wires</li>
+          <li>Designed and 3d printed wiring harnesses</li>
+          <li>Wired all LED's and SMA wires</li>
+          <ul>
+            <li>Wires were connectorized to allow easy setup/teardown</li>
+          </ul>
+          <li>Designed the 3d printed hardware</li>
+          <li>Sewed together all of the powered shrouds</li>
+        </ul>
+      </p>
+
+      <h1><a class="color-link" href="https://www.youtube.com/watch?v=BTRmKU5Vo_U">Programmable Material</a></h1>
+      <img width=400 src="images/etched_copper.jpg" alt="copper">
+      <p class="p2">
+        Among my responsiblities in the MorphoGenesis Lab is to conduct research on alternative materials. The goal is to find ways to create kinetic
+        movement using alternative methods other than traditional motors.
+        <br>I replicated the work of the MIT Media Lab Tangible Media Group <a class="color-link" href="https://tangible.media.mit.edu/project/unimorph/">uniMorph</a> project.
+        <br>I used a copper tape that had a plastic backing. I printed the desired patterns on transparencies and used
+        an iron to transfer the ink to the copper to create an insulating layer. I used the acid bath at the Fine Arts lab to etch away the undesired copper.
+        <br>The resulting pieces are able to bend when a current passes through them, heating the copper, and relax back to a flat shape when the current is
+        removed and the part cools.
+      </p>
+
+      <hr>
+
+      <a class="page-link" href="index.html" class="hSpace">Main</a>
+      <a class="page-link" href="education.html" class="hSpace">Education</a>
+      <a class="page-link" href="experience.html" class="hSpace">Work Experience</a>
+
+    </div>
+
+    <div class="bottom-container">
+      <p class="copyright">© 2021 Marcus Blaisdell</p>
+    </div>
+
+  </body>
+</html>

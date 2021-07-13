@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HP Story</title>
+  </head>
+  <body>
+    <div class="middle-container2">
+      <div class="profile">
+
+      <h2>Hewlett Packard / Agilent Technologies</h2>
+      <h3>Production Operator (Level 92)</h3>
+      <h3>Process Information Management Technician (Level 93)</h3>
+      <h3>Software Support (IT) Technician (Level 95)</h3>
+
+      <p class="p2">
+        In 1995, I got hired by Hewlett Packard as a Production Operator, Level 92. I was hired in a group of fifteen and was one of five hired as level 92 with ten hired as level 91. This allowed me to work in the Pick-and-Place department operating high-speed surface mount placement equipment.
+This was a really fun job and as it turned out, a great starting point for my new career in manufacturing.
+I became a trainer and helped revise many of the training documents used in the department as process improvements were made and new processes were added.
+For me, the greatest thing about this job was the program controller computers that we used to transmit our CNC programs to the PNP machines. They were Unix terminals and they were a gateway to a brand new world for me.
+</p>
+
+<p class="p2">
+While exploring on my own, I was able to learn how the program they were running worked to distribute the programs to the appropriate machines and I began looking closely at those programs and found they were text based and easily readable. They included a header followed by lines that gave instructions to the machines on what position to move to, what nozzle to select, what X and Y position to move the board to, etc. Because I had learned all of this, I had an opportunity one day when an engineer who was running a test asked if we could run a program on a different machine than it was prepped for. Usually, this would require contacting the Process Information Management department (PIM) department to regenerate a program for the target machine. Since I had studied the programs, I knew that it would only generate the same file with the header modified to let the transmission program recognize the correct machine. I told the engineer I could get him a program on the new target machine using one that already existed for another machine and he eagerly encouraged me to do it. I grabbed a floppy disk, copied the program from the file system of the terminal it was on, transferred it to the target terminal, used a text editor to edit the header to the correct machine, and ran the transmission program which read the file as valid, and sent it to the target machine. The engineer was able to run his tests on his target machine and I earned my credibility as a person who can help with technical assistance for these machines.
+</p>
+<p class="p2">
+Word of my exploit made its way to the PIM department and since HP has a culture of encouraging growth, one of the PIM technicians came up to me after that and asked me if I knew about the other Unix terminal in our department that wasn’t locked down and was running a full HP-UX 10.x OS. He told me that any HP employee could request a login account which I immediately did and was promptly granted. Then, my new best friend, Todd the PIM tech showed me how to get started with the Unix command line. Talk about choirs of heavenly angels singing! That was the coolest computer system I had ever seen! Another great benefit HP had was their “Learning Center” which was a room upstairs with several PC computers and Unix terminals along with a library of books and self-paced computer learning programs to learn a wide variety of things HP would find useful for their employees to learn. I used a Unix book and a Self-Based learning program to begin learning about how to navigate in Unix and write scripting programs including the ultra-powerful text parsing program awk.
+</p>
+<p class="p2">
+Eighteen months after starting out on the PNP line, an opportunity came up to apply for a job with the PIM department. I applied and passed the interview and was offered the job. I now sat next to my good friend Todd the PIM tech as a PIM tech (Level 93). In my new job, I learned more Unix tools and was now responsible for processing the information from customers into machine recipes and build documentation for multiple fab departments across the entire production floor. I also now regularly hung out with Mike the PIM tech who was an awk wizard and Darrel, the Software Support Tech.
+</p>
+<p class="p2">
+Todd and Darrel immediately got me started on learning C programming. They told me it would allow me to do a lot more than I was doing with Unix script. By this time, I had already written my own phone number program using Unix scripting and grep. Simple, I know, but I used it several times a day so it was practical and it would let me look up a phone number by name or a name by department, very useful and everyone in my department started using it as well. With the C programming language, I started writing my own parsing programs that would read through the text files we received from our customers and extract specific information we were using for other tasks. My ability to do this led to my boasting one day that I could write my own program to create a PNP program. My manager called me on it and I jumped on the opportunity and did it in a couple of days. My version was lacking in the optimization that our professional tool had but it worked and my credibility increased because of it.
+</p>
+<p class="p2">
+We then got new automated Stencil machines made by DEK. These were pretty nice machines with a lot of new functionality including programmable supports. That had to be done on the physical machine and while programming, the machine was not available for production use. When HP made double-sided printed circuit boards, the first side that would go through the stencil process could use all of the supports to hold it up but the second side had components on it and some of the supports had to be lowered to prevent them from damaging a component. This process was originally manual. DEK provided an offline editor that would let us create programs with the correct board dimensions and fiducial locations but it didn’t yet allow for support pin programming. A PIM tech would take a board to the machine and measure each location where a pin would collide with a component, open the program, deactivate those pins, and test the board to verify no support pin was touching any component. Once I saw that, I told my manager that we already have the board size, fiducial locations, and component position and size information in the placement files and I could write a program to compare that information to the support placement and generate a list of pins to drop automatically. I did and this allowed us to reduce the programming time at the machine from around thirty minutes a day to less than five and if we coordinated with the production operator break times, we could effectively program the machines with zero production downtime.
+</p>
+<p class="p2">
+During my time in PIM, I became the only technician that was certified on all production hardware. I was able to cover for anybody in the department. This covered: Fuji IP and CP machines, automated component carousels, automated chemical masking machines, computer guided through-hole placement Camalot machines, automated PCB router’s, and EEPROM programming.
+</p>
+<p class="p2">
+While I was working hard to improve my skills, other people were working just as hard and Darrel had gotten an opportunity as a Software Engineer and he recommended me as his replacement. I interviewed for the job and after the interview was told that I was obviously qualified and given the job, Level 95 Software Support Technician.
+</p>
+<p class="p2">
+I was now responsible for networking and maintaining the control software for all of the above mentioned machines as well as managing our WIP(Work-In-Process) tracking and providing software support to Engineering and Management for tools like MS word, Excel, and Access. Enter new best friend, Bill from Manufacturing Software Development. Bill introduced me to the departments Enterprise Resource System which was built on an Informix database. Cue another heavenly choir. Databases became my next awesome new learning experience. I learned about SQL and began using it to write custom queries to get data I needed for my reports and I quickly gained a reputation as someone who could create such queries. Many people in management and engineering came to me to ask me to create custom queries for them to generate their reports. The requests were so abundant that I created a portal to manage them. Because of this, I was then asked to revise the production “on-hold” process.
+</p>
+
+      </div>
+  </body>
+</html>
